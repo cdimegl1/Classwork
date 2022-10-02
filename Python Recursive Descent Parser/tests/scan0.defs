@@ -1,0 +1,8 @@
+  Some text
+  more text
+    #else stuff ignored
+    #ifndef _123 ignored
+    # ifdef text line
+    #elif 2222 note 2222 not a sym
+  more text
+  and more

@@ -1,0 +1,8 @@
+Protocol:
+	1) parent creates single pipe for communication from all children to parent
+	2) parent creates n pipes for individual communication from parent to n children
+	3) parent writes all test data bytes child will need during its lifetime, then closes the write end
+	4) child reads bytes from pipe until read returns 0
+	5) after classification, the child writes the index of the test and the return value of knn to the children-to-parent pipe
+	6) parent loops, reading the index of the test and return values, then checking and printing the results
+	7) parent waits on all child processes

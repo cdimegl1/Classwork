@@ -1,0 +1,5 @@
+#ifdef DEF
+Here are some lines
+# ifdef
+more #ifndef lines
+#endif

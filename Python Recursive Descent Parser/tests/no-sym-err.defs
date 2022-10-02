@@ -1,0 +1,5 @@
+#ifdef 2222
+Here are some lines
+# ifdef
+more #ifndef lines
+#endif

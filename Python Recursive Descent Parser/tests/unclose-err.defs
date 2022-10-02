@@ -1,0 +1,5 @@
+Some line
+#ifdef SYM
+Def Line
+#else
+else line

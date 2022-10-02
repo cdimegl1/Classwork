@@ -1,0 +1,9 @@
+Before any #ifdef
+#ifdef DEF
+Here are some lines
+# else not recognized because of space
+#else
+Else text
+More else text
+#endif
+After #ifdef

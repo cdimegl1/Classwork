@@ -1,0 +1,21 @@
+Begin line
+  #ifndef _34
+    #define _34
+    #ifdef _c
+    1 nested line
+    #else
+      #ifdef abc
+      2 nested
+      #elif xxx
+      2 elif nested 1
+      #elif xxx
+      2 elif nested 2
+      #else
+      2 else
+      #endif
+    #endif
+  #endif
+End line
+
+
+        

@@ -1,0 +1,4 @@
+Training	Test_with_stopwords		Test_without_stopwords
+0.9925205	0.9623431				0.9602510
+
+The accuracy improves very slightly when we filter out stopwords. Stopwords may introduce a lot of noise into the data set because they don't tell us anything about the context or true meaning of a document. Stopwords are equally likely to be included in spam and ham documents so they are not accurate predictors of whether a document in spam or ham.

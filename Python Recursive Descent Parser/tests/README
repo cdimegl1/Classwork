@@ -1,0 +1,8 @@
+Test input data in *.defs.
+Expected test output in *.scan.json for scan test.
+Expected test output in *.parse.json for parse test.
+No test output for *-err.defs
+
+Note that order of fields in JSON objects is undefined; hence outputs
+may not compare using textual comparison.  However, outputs produced
+using json_pp should always compare equal for correct output.

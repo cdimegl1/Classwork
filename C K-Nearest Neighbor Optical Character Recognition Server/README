@@ -1,0 +1,29 @@
+usage: LD_LIBRARY_PATH=$HOME/cs551/lib ./knnd SERVER_DIR DATA_DIR [K]
+usage: LD_LIBRARY_PATH=$HOME/cs551/lib ./knnc SERVER_DIR DATA_DIR [N_TESTS]
+
+protocol:
+
+	server:
+		1) daemon process creates fifo "REQUESTS" in SERVER_DIR
+		2) daemon loops forever doing:
+			a) read pid of client from REQUESTS fifo
+			b) spawn worker process
+		3) worker process creates two fifos - one for server to client communication named  <PID>_out and one for client to server communication named <PID>
+		4) worker process reads in number of tests to perform
+		5) for each test, worker does:
+			a) read all 784 bytes of image from <PID> fifo
+			b) writes nearest index and predicted label of test image to <PID>_out
+		6) closes file descriptors and unlinks <PID> fifo
+
+
+	client:
+		1) writes PID to "REQUESTS" fifo in SERVER_DIR
+		2) creates <PID> fifo if it doesn't already exist
+		3) writes number of tests to be done into <PID> fifo
+		4) for each test, client does:
+			a) write all 784 bytes of image to <PID> fifo
+			b) read predicted index and label from <PID>_out fifo
+			c) print expected and predicted results if they differ
+		5) prints percentage of successful classifications
+		6) closes file descriptors and unlinks <PID>_out fifo
+

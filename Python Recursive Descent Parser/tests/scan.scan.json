@@ -1,0 +1,1 @@
+[["TEXT","  LINE 000 0000 000 000\n  LINE #11 111  11 11 11\n"],["ELIF","#elif"],["TEXT","  4444 44 4 44 # @#! LINE\n"],["IFDEF","#ifdef"],["SYM","_Sym"],["TEXT","  # else not recognized as directive\n"],["ELSE","#else"],["ELIF","#elif"],["TEXT","   88888 LINE\n"],["ENDIF","#endif"],["IFNDEF","#ifndef"],["SYM","sym_999"]]

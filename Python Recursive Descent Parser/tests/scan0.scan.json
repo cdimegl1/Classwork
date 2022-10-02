@@ -1,0 +1,1 @@
+[["TEXT","  Some text\n  more text\n"],["ELSE","#else"],["IFNDEF","#ifndef"],["SYM","_123"],["TEXT","    # ifdef text line\n"],["ELIF","#elif"],["TEXT","  more text\n  and more\n"]]

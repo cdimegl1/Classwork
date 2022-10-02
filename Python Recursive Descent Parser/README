@@ -1,0 +1,7 @@
+Both js and python versions; python version is transliteration of js version.
+
+Use env var XLANG=js or XLANG=py to run specific language.
+
+For example, to run all tests using python version:
+
+XLANG=py run-all-tests.sh

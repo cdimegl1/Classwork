@@ -1,0 +1,16 @@
+usage: 
+	LD_LIBRARY_PATH=$HOME/cs551/lib ./knnd DATA_DIR [K]
+	LD_LIBRARY_PATH=$HOME/cs551/lib ./knnc DATA_DIR [N_TESTS]
+
+protocol:
+	1) server opens three semaphores and shared memory with well-known names
+	2) in an infinite loop, the server waits on the request semaphore
+	3) the client waits on server semaphore
+	4) client writes number of tests into shared memory, posts the request semaphore, then waits on the response semaphore
+	5) server reads the number of tests, posts the response semaphore
+	6) until all tests are completed:
+		a) server waits on request semaphore
+		b) client writes image bytes into shared memory, posts request semaphore, and waits on response semaphore
+		c) server reads image bytes, classifies image, writes index and classification result into shared memory, and posts response semaphore 
+		d) client reads index and classification result
+	7) client posts the server semaphore

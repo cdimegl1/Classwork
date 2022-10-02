@@ -1,0 +1,14 @@
+D1
+H1 Training 1.0000
+H1 Validation 0.9650
+H1 Test 0.9567
+H2 Training 1.0000
+H2 Validation 0.9667
+H2 Test 0.9533
+D2
+H1 Training 0.9983
+H1 Validation 0.7717
+H1 Test 0.7233
+H2 Training 0.9983
+H2 Validation 0.7717
+H2 Test 0.7250

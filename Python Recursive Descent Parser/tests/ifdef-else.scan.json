@@ -1,0 +1,1 @@
+[["TEXT","Before any #ifdef\n"],["IFDEF","#ifdef"],["SYM","DEF"],["TEXT","Here are some lines\n# else not recognized because of space\n"],["ELSE","#else"],["TEXT","Else text\nMore else text\n"],["ENDIF","#endif"],["TEXT","After #ifdef\n"]]
